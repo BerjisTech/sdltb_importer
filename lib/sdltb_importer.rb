@@ -41,7 +41,7 @@ module SdltbImporter
     def import_data
       db = Mdb.open(open(file_path).path)
       db[:mtConcepts].each_with_index do |record, index|
-        @doc[:tc][:definition] = record[:text].scan(DEFINITION_REGEX)[0]
+        @doc[:tc][:definition] = PrettyStrings::Cleaner.new(record[:text].scan(DEFINITION_REGEX).flatten[0]).pretty.gsub("\\","&#92;").gsub("'",%q(\\\'))
         generate_unique_id
         @doc[:term][:counter] += record[:text].scan(TERM_REGEX).length
         language_groups = record[:text].scan(LANGUAGE_GROUP_REGEX).flatten

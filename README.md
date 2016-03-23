@@ -22,7 +22,20 @@ gem 'sdltb_importer'
 ## Usage
 
 ```ruby
+# Get the high level stats of a .sdltb file
+# Including the encoding is optional. If not included the gem will attempt to detect the encoding.
+file_path = File.expand_path('../sample_files/sample.tbx')
+sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+sdltb.stats
+# => {:tc_count=>1, :term_count=>3, :language_pairs=>[["en", "fr"], ["en", "es"]]}
 
+# Extract the segments of a .sdltb file
+# Result: [term concepts, terms]
+# term concepts = [tu_id, definition]
+# terms = [tu_id, language, part_of_speech, term]
+
+sdltb.import
+# => [[["6234-1457917153-1"], "the earth, together with all of its countries, peoples, and natural features.""], [["6234-1457917153-1", "en", "noun", world"], ["6234-1457917153-1", "fr", "noun", "monde"], ["6234-1457917153-1", "es", "noun", "mundo"]]]
 ```
 
 ## Contributing
