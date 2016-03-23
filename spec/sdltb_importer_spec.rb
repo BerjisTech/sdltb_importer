@@ -26,40 +26,40 @@ describe SdltbImporter do
   end
 
   describe '#import' do
-    # it 'imports a .sdltb file 1' do
-    #   file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_1.sdltb')
-    #   sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
-    #   expect(sdltb.import[0].length).to eq(144)
-    # end
+    it 'imports a .sdltb file 1' do
+      file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_1.sdltb')
+      sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+      expect(sdltb.import[0].length).to eq(144)
+    end
 
-    # it 'imports a .sdltb file 1' do
-    #   file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_1.sdltb')
-    #   sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
-    #   expect(sdltb.import[1].length).to eq(300)
-    # end
+    it 'imports a .sdltb file 1' do
+      file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_1.sdltb')
+      sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+      expect(sdltb.import[1].length).to eq(300)
+    end
 
-    # it 'imports a .sdltb file 2' do
-    #   file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_2.sdltb')
-    #   sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
-    #   expect(sdltb.import[0].length).to eq(10)
-    # end
+    it 'imports a .sdltb file 2' do
+      file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_2.sdltb')
+      sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+      expect(sdltb.import[0].length).to eq(10)
+    end
 
-    # it 'imports a .sdltb file 2' do
-    #   file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_2.sdltb')
-    #   sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
-    #   expect(sdltb.import[1].length).to eq(24)
-    # end
+    it 'imports a .sdltb file 2' do
+      file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_2.sdltb')
+      sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+      expect(sdltb.import[1].length).to eq(24)
+    end
 
-    # it 'imports a .sdltb file 3' do
-    #   file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_3.sdltb')
-    #   sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
-    #   expect(sdltb.import[0].length).to eq(904)
-    # end
+    it 'imports a .sdltb file 3' do
+      file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_3.sdltb')
+      sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+      expect(sdltb.import[0].length).to eq(904)
+    end
 
-    # it 'imports a .sdltb file 3' do
-    #   file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_3.sdltb')
-    #   sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
-    #   expect(sdltb.import[0].length).to eq(9571)
-    # end
+    it 'imports a .sdltb file 3' do
+      file_path = File.expand_path('../sdltb_importer/spec/sample_files/sample_3.sdltb')
+      sdltb = SdltbImporter::Sdltb.new(file_path: file_path)
+      expect(sdltb.import[0].length).to eq(9571)
+    end
   end
 end
